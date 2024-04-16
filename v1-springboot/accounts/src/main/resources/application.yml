@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb  # Use in-memory database for development
+    driverClassName: org.h2.Driver
+    username: sa
+    password:  # Optional, leave blank for in-memory database
+    initialize: true  # Enable automatic schema initialization
+
+  h2:
+    console:
+      enabled: true  # Enable H2 console for database management
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # Update schema if necessary
+    show-sql: true  # Optional, enable SQL logging for debugging
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "prod"
+        
+      
+build:
+  version: "3.0"
+accounts:
+  message: "Welcome to EazyBank accounts related local APIs "
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@eazybank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345

@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank Cards related prod APIs "
+  contactDetails:
+    name: "Reenu Aishwarya - Card Owner"
+    email: "aishwarya@eazybank.com"
+  onCallSupport:
+    - (123) 392-4829
+    - (476) 203-0384
