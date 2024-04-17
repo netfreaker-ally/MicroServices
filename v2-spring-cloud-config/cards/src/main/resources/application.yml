@@ -24,7 +24,11 @@ spring:
     show-sql: true  # Optional, enable SQL logging for debugging
  config:
     import: "optional:configserver:http://localhost:8071/"
-    
+ management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   
    
  
   
