@@ -1,0 +1,30 @@
+server:
+  port: 9000
+
+spring:
+ application:
+  name: "cards"
+ profiles:
+  active: "prod"
+ datasource:
+    url: jdbc:h2:mem:testdb  # Use in-memory database for development
+    driverClassName: org.h2.Driver
+    username: sa
+    password:  # Optional, leave blank for in-memory database
+    initialize: true  # Enable automatic schema initialization
+
+ h2:
+    console:
+      enabled: true  # Enable H2 console for database management
+
+ jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # Update schema if necessary
+    show-sql: true  # Optional, enable SQL logging for debugging
+ config:
+    import: "optional:configserver:http://localhost:8071/"
+    
+   
+ 
+  
