@@ -132,6 +132,7 @@ public class AccountController {
 	@PutMapping("/update")
 	    public ResponseEntity<ResponseDto> updateAccountDetails(@Valid @RequestBody CustomerDto customerDto) {
 	        boolean isUpdated = iacccountService.updateAccount(customerDto);
+	        System.out.println("SAdg");
 	        if(isUpdated) {
 	            return ResponseEntity
 	                    .status(HttpStatus.OK)
