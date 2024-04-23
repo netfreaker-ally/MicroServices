@@ -1,0 +1,12 @@
+
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to EazyBank Loans related prod APIs "
+  contactDetails:
+    name: "Reine Aishwarya - Loans Owner"
+    email: "aadhya@eazybank.com"
+  onCallSupport:
+    - (453) 392-4829
+    - (236) 203-0384
