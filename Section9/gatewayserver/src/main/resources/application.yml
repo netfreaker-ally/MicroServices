@@ -1,0 +1,39 @@
+
+spring:
+ 
+ application:
+  name: "gatewayserver"
+ cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false #true for default behaviours like 8072/actuatot/gateway/routes/
+          lowerCaseServiceId: true
+ config:
+    import: "optional:configserver:http://localhost:8071/"
+management:
+  endpoint:
+   gateway:
+      enabled: true
+  info:
+   env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+ app:
+  name: "gatewayserver"
+  description: "My Own Bank Gateway Server Application"
+  version: "1.0.0"
+    
+logging:
+  level:
+    com:
+      microservices:
+        gatewayserver: DEBUG          
+   
+ 
+  
