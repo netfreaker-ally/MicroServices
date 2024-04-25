@@ -109,6 +109,7 @@ public class CardsController {
 	@Operation(summary = "Get Build Information", description = "Get Build Information in   Cards details MicrServices")
 	@ApiResponses({ @ApiResponse(responseCode = "200", description = "HTTP Status OK"),
 			@ApiResponse(responseCode = "500", description = "HTTP Status Internal Server Error", content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))) })
+	
 	@GetMapping("/build-info")
 	public ResponseEntity<String> getBuildInfo() {
 		return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
