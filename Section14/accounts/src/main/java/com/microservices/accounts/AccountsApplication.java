@@ -37,14 +37,11 @@ import io.swagger.v3.oas.annotations.info.License;
 				
 				),
 		externalDocs=@ExternalDocumentation(
-				description = "Eazybank Accounts microservices REST API Documentation",
+				description = "Eazybank Accounts microservices REST API kyl",
 				url="https://www.google.com"
 
-				)
-		
-		
+				)	
 		)
-
 public class AccountsApplication {
 
 	public static void main(String[] args) {
